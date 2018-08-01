@@ -1,0 +1,15 @@
+{
+  "name": "pdf_converter",
+  "version": "1.0.0",
+  "description": "A simple api for generating PDF's based on a HTML page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "djaircarvalho.dj7@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
