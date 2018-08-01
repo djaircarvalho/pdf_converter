@@ -4,18 +4,16 @@
   "description": "A simple api for generating PDF's based on a HTML page",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js"
   },
   "author": "djaircarvalho.dj7@gmail.com",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "puppeteer": "^1.6.1"
   },
   "devDependencies": {
     "nodemon": "^1.18.3"
-  },"scripts": {
-    "dev": "nodemon server.js"
-  },
+  }
 }
