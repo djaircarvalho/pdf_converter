@@ -6,7 +6,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(bodyParser.json())
 
-const port = 8000;
+const port = process.env.PORT || 8080;
 require('./app/routes')(app);
 app.listen(port, () => {
   console.log('We are live on ' + port);

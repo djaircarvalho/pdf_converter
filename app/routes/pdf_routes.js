@@ -18,7 +18,7 @@ module.exports = function(app) {
         await page.goto(req.body.url, {waitUntil: 'networkidle2'});
         await page.pdf({path: file_name, format: 'A4'});
         await browser.close();
-        fs.readFile(file_name, function(err, data) {
+        await fs.readFile(file_name, function(err, data) {
           res.writeHead(200, {'Content-Type': 'application/pdf'});
           res.write(data);
           res.end();
