@@ -13,9 +13,11 @@ module.exports = function(app) {
         (async() => {
             const browser = await puppeteer.launch({args: ['--no-sandbox', '--disable-setuid-sandbox']});
             const page = await browser.newPage();
-            await page.setExtraHTTPHeaders(
-              req.body.headers
-            );
+            if(req.body.headers){
+              await page.setExtraHTTPHeaders(
+                req.body.headers
+              );
+            }
 
             page.on('error', err => {
                 console.log('error happen at the page: ', err);
